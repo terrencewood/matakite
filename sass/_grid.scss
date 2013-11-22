@@ -75,4 +75,13 @@ $gutter: 1rem !default;
 	.l50 > * { width: 50%; }
 	.l66 > * { width: 66.666%; }
 	.l75 > * { width: 75%; }
+	.lxx { display: none; }
+}
+
+@media only screen and (max-width: #{$s_ems}){
+	.gxx { display: none; }
+}
+
+@media only screen and (min-width: #{$m_ems}) and (max-width: #{$l_ems}) {
+	.mxx { display: none; }
 }
