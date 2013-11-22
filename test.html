@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>matakite test</title>
+	<link rel="stylesheet" href="stylesheets/screen.css" />
+	<style>
+		body {
+			font: 1em sans-serif;
+			margin: 0;
+			padding:0;
+
+		} 
+		section {
+			max-width: 62em;
+			margin: 1em auto;
+		}
+
+		section > div {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+
+
+		}
+
+		section > div > div{
+			background: rgba(0,0,0,.1);
+			text-align: center;
+			min-height: 22px;
+			padding-top: 0.25em;
+			padding-bottom: 0.25em;
+
+		}
+
+
+		section > div:before {
+			content: attr(class);
+			position: absolute;
+			font: 12px monospace;
+			padding: 4px;
+			background: #000;
+			color: #fff;
+		}
+		
+		
+		@-webkit-keyframes fade {
+			0% { opacity:0; visibility: hidden; }
+			100% { opacity:1; display:block; }
+		}
+
+
+		
+
+	</style>
+</head>
+<body>
+<section>
+	<h2 tabindex="0">
+		All screens
+	</h2>
+	<div class="g">
+		<div>
+			full width
+		</div>
+	</div>
+	<div class="g g12">
+		<div>
+			one third
+		</div>
+		<div>
+			two thirds
+		</div>
+	</div>
+	<div class="g g21">
+		<div>
+			two thirds
+		</div>
+		<div>
+			one third
+		</div>
+	</div>
+	<div class="g g25">
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+	</div>
+	<div class="g g33">
+		<div>
+			one third
+		</div>
+		<div>
+			one third
+		</div>
+		<div>
+			one third
+		</div>
+	</div>
+	<div class="g g50">
+		<div>
+			one half
+		</div>
+		<div>
+			one half
+		</div>
+	</div>
+	<div class="g g66">
+		<div>
+			two thirds
+		</div>
+	</div>
+	<div class="g g75">
+		<div>
+			three quarters
+		</div>
+	</div>
+</section>
+<section>
+	<h2>
+		Medium screens and up
+	</h2>
+	<div class="g">
+		<div>
+			full width
+		</div>
+	</div>
+	<div class="g m12">
+		<div>
+			one third
+		</div>
+		<div>
+			two thirds
+		</div>
+	</div>
+	<div class="g m21">
+		<div>
+			two thirds
+		</div>
+		<div>
+			one third
+		</div>
+	</div>
+	<div class="g m25">
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+	</div>
+	<div class="g m33">
+		<div>
+			one third
+		</div>
+		<div>
+			one third
+		</div>
+		<div>
+			one third
+		</div>
+	</div>
+	<div class="g m50">
+		<div>
+			one half
+		</div>
+		<div>
+			one half
+		</div>
+	</div>
+	<div class="g m66">
+		<div>
+			two thirds
+		</div>
+	</div>
+	<div class="g m75">
+		<div>
+			three quarters
+		</div>
+	</div>
+</section>
+<section>
+	<h2>
+		Large screens
+	</h2>
+	<div class="g">
+		<div>
+			full width
+		</div>
+	</div>
+	<div class="g l12">
+		<div>
+			one third
+		</div>
+		<div>
+			two thirds
+		</div>
+	</div>
+	<div class="g l21">
+		<div>
+			two thirds
+		</div>
+		<div>
+			one third
+		</div>
+	</div>
+	<div class="g l25">
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+		<div>
+			one quarter
+		</div>
+	</div>
+	<div class="g l33">
+		<div>
+			one third
+		</div>
+		<div>
+			one third
+		</div>
+		<div>
+			one third
+		</div>
+	</div>
+	<div class="g l50">
+		<div>
+			one half
+		</div>
+		<div>
+			one half
+		</div>
+	</div>
+	<div class="g l66">
+		<div>
+			two thirds
+		</div>
+	</div>
+	<div class="g l75">
+		<div>
+			three quarters
+		</div>
+	</div>
+</section>
+</body>
+</html>
