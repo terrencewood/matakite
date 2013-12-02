@@ -1,8 +1,8 @@
 // A responsive grid that can be collapsed at different breakpoints,
 // enabling a different layout for small, medium and large screens.
 //
-// Implement your mobile grid first using the .gxx classes, then build
-// up the layout for medium and large screens using .mxx and .lxx classes
+// Implement your mobile grid first using the .gN classes, then build
+// up the layout for medium and large screens using .mN and .lN classes
 
 @import 'vars';
 
@@ -10,6 +10,21 @@ $m_ems: 30.1em !default;
 $l_ems: 48.1em !default;
 $max_ems: 62em !default;
 $gutter: 1rem !default;
+
+
+@mixin widths($prefix) {
+
+	.#{$prefix}12 > :first-child { width: 33.333%; }
+	.#{$prefix}12 > * { width: 66.666%; }
+	.#{$prefix}21 > :first-child { width: 66.666%; }
+	.#{$prefix}21 > * { width: 33.333%; }
+	.#{$prefix}25 > * { width: 25%; }
+	.#{$prefix}33 > * { width: 33.333%; }
+	.#{$prefix}50 > * { width: 50%; }
+	.#{$prefix}66 > * { width: 66.666%; }
+	.#{$prefix}75 > * { width: 75%; }
+
+}
 
 // Lay the ground work
 .g {
@@ -39,42 +54,18 @@ $gutter: 1rem !default;
 
 // Default (applies to all screens)
 @media only screen {
-	.g12 > :first-child { width: 33.333%; }
-	.g12 > * { width: 66.666%; }
-	.g21 > :first-child { width: 66.666%; }
-	.g21 > * { width: 33.333%; }
-	.g25 > * { width: 25%; }
-	.g33 > * { width: 33.333%; }
-	.g50 > * { width: 50%; }
-	.g66 > * { width: 66.666%; }
-	.g75 > * { width: 75%; }
+	@include widths('g');
 }
 
 // Medium screens
 @media only screen and (min-width: #{$m_ems}) {
 	.g > * { padding: 0 $gutter; }
-	.m12 > :first-child { width: 33.333%; }
-	.m12 > * { width: 66.666%; }
-	.m21 > :first-child { width: 66.666%; }
-	.m21 > * { width: 33.333%; }
-	.m25 > * { width: 25%; }
-	.m33 > * { width: 33.333%; }
-	.m50 > * { width: 50%; }
-	.m66 > * { width: 66.666%; }
-	.m75 > * { width: 75%; }
+	@include widths('m');
 }
 
 // Large screens
 @media only screen and (min-width: #{$l_ems}) {
-	.l12 > :first-child { width: 33.333%; }
-	.l12 > * { width: 66.666%; }
-	.l21 > :first-child { width: 66.666%; }
-	.l21 > * { width: 33.333%; }
-	.l25 > * { width: 25%; }
-	.l33 > * { width: 33.333%; }
-	.l50 > * { width: 50%; }
-	.l66 > * { width: 66.666%; }
-	.l75 > * { width: 75%; }
+	@include widths('l');
 	.lxx { display: none; }
 }
 
