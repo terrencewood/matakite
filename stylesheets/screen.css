@@ -350,9 +350,16 @@ table {
   padding-left: 0;
   padding-right: 0; }
 
+.ie .g > * {
+  display: inline-block;
+  margin: 0 -4px 0 0; }
+
 .g > * {
   padding: 0 0.5rem;
   width: 100%; }
+  .ie .g > * {
+    display: inline-block;
+    margin: 0 -4px 0 0; }
 
 .g > .g {
   padding: 0; }
