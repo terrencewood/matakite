@@ -13,17 +13,17 @@ $gutter: 1rem !default;
 
 
 @mixin widths($prefix) {
-
 	.#{$prefix}12 > :first-child { width: 33.333%; }
 	.#{$prefix}12 > * { width: 66.666%; }
+	.#{$prefix}13 > :first-child { width: 25%; }
+	.#{$prefix}13 > * { width: 75%; }
 	.#{$prefix}21 > :first-child { width: 66.666%; }
 	.#{$prefix}21 > * { width: 33.333%; }
 	.#{$prefix}25 > * { width: 25%; }
+	.#{$prefix}31 > :first-child { width: 75%; }
+	.#{$prefix}31 > * { width: 25%; }
 	.#{$prefix}33 > * { width: 33.333%; }
 	.#{$prefix}50 > * { width: 50%; }
-	.#{$prefix}66 > * { width: 66.666%; }
-	.#{$prefix}75 > * { width: 75%; }
-
 }
 
 // Lay the ground work
