@@ -40,6 +40,11 @@ $gutter: 1rem !default;
 	padding-right: 0;
 }
 
+.ie .g > * {
+    display: inline-block;
+    margin: 0 -4px 0 0;
+}
+
 .g > * {
 	padding: 0 $gutter/2;
 	width: 100%;
