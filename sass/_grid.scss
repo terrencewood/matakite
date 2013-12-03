@@ -59,26 +59,26 @@ $gutter: 1rem !default;
 }
 
 // Default (applies to all screens)
-@media only screen {
+@include breakpoint() {
 	@include widths('g');
 }
 
 // Medium screens
-@media only screen and (min-width: #{$m_ems}) {
+@include breakpoint('m') {
 	.g > * { padding: 0 $gutter; }
 	@include widths('m');
 }
 
 // Large screens
-@media only screen and (min-width: #{$l_ems}) {
+@include breakpoint('l') {
 	@include widths('l');
 	.lxx { display: none; }
 }
 
-@media only screen and (max-width: #{$s_ems}) {
+@include breakpoint('s') {
 	.gxx { display: none; }
 }
 
-@media only screen and (min-width: #{$m_ems}) and (max-width: #{$l_ems}) {
+@include breakpoint('(min-width: #{$m_ems}) and (max-width: #{$l_ems})') {
 	.mxx { display: none; }
 }

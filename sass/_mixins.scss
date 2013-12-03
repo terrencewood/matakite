@@ -11,23 +11,29 @@ $base-font-size: 16px !default;
 $base-line-height: 24px !default;
 
 // Create media queries rules from named breakpoints (s, m, l)
-// or pass in a media query
+// or pass in a media query including brackets
 @mixin breakpoint($point) {
-	@if $point == s {
-		@media only screen and (max-width: #{$s_ems}) { @content; }
-	}
+	@if $point {
+		@if $point == s {
+			@media only screen and (max-width: #{$s_ems}) { @content; }
+		}
 
-	@else if $point == m {
-		@media only screen and (min-width: #{$m_ems}) { @content; }
-	}
+		@else if $point == m {
+			@media only screen and (min-width: #{$m_ems}) { @content; }
+		}
 
-	@else if $point == l {
-		@media only screen and (min-width: #{$l_ems}) { @content; }
+		@else if $point == l {
+			@media only screen and (min-width: #{$l_ems}) { @content; }
+		}
+
+		@else {
+			@media only screen and #{$point} { @content; }
+		}
 	}
 
 	@else {
-		@media only screen and (#{$point}) { @content; }
-	}
+		@media only screen { @content; }
+	}	
 }
 
 // Create a font style with vertical rhythm from a single value
