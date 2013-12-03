@@ -339,6 +339,10 @@ table {
   border-spacing: 0; }
 
 .g {
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
   list-style-type: none;
   margin-left: auto;
   margin-right: auto;
@@ -347,10 +351,7 @@ table {
   padding-right: 0; }
 
 .g > * {
-  display: inline-block;
-  margin: 0 -4px 0 0;
   padding: 0 0.5rem;
-  vertical-align: top;
   width: 100%; }
 
 .g > .g {

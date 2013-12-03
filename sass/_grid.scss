@@ -28,6 +28,10 @@ $gutter: 1rem !default;
 
 // Lay the ground work
 .g {
+	display: -webkit-flex;
+	-webkit-flex-flow: row wrap;
+	display: -ms-flexbox;
+	-ms-flex-flow: row wrap;
 	list-style-type: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -37,10 +41,7 @@ $gutter: 1rem !default;
 }
 
 .g > * {
-	display: inline-block;
-	margin: 0 -4px 0 0;
 	padding: 0 $gutter/2;
-	vertical-align: top;
 	width: 100%;
 }
 
@@ -69,7 +70,7 @@ $gutter: 1rem !default;
 	.lxx { display: none; }
 }
 
-@media only screen and (max-width: #{$s_ems}){
+@media only screen and (max-width: #{$s_ems}) {
 	.gxx { display: none; }
 }
 
