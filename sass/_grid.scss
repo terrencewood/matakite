@@ -43,6 +43,11 @@ $gutter: 1rem !default;
 .g > * {
 	padding: 0 $gutter/2;
 	width: 100%;
+	// Fallback to inline-block for grid units in IE
+	.ie & {
+		display: inline-block;
+		margin: 0 -4px 0 0;
+	}
 }
 
 .g > .g { padding: 0; }
