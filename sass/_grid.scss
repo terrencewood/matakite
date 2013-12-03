@@ -47,6 +47,8 @@ $gutter: 1rem !default;
 	.ie & {
 		display: inline-block;
 		margin: 0 -4px 0 0;
+		padding: 0 $base-font-size/2;
+		padding: 0 $gutter/2;
 	}
 }
 

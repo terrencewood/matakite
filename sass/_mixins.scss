@@ -11,7 +11,7 @@ $base-font-size: 16px !default;
 $base-line-height: 24px !default;
 
 // Create media queries rules from named breakpoints (s, m, l)
-// or pass in a media query including brackets
+// or pass in a fully formed media query
 @mixin breakpoint($point) {
 	@if $point {
 		@if $point == s {

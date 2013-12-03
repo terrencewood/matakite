@@ -12,7 +12,12 @@
 			margin: 0;
 			padding: 0.5em;
 
-		} 
+		}
+		h2 {
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+		 
 		section {
 			max-width: 62em;
 			margin: 1em auto;
@@ -28,10 +33,6 @@
 		section > div > div{
 			background: rgba(0,0,0,.1);
 			text-align: center;
-			min-height: 22px;
-			padding-top: 0.25em;
-			padding-bottom: 0.25em;
-
 		}
 
 
@@ -40,8 +41,30 @@
 			position: absolute;
 			font: 12px monospace;
 			padding: 4px;
-			background: #000;
+			background: rgba(0,0,0,.5);
 			color: #fff;
+		}
+		
+		.g > * {
+			font: 1em monospace;
+			padding-top: 0.25em;
+			padding-bottom: 0.25em;
+		}
+		
+		.g:not([class*="m"]):not([class*="l"]) > * {
+			border-left: 1px solid rgba(0,0,0,.3);
+		}
+		
+		@media only screen and (min-width: 30.1em) {
+			[class*="m"] > * {
+				border-left: 1px solid rgba(0,0,0,.3);
+			}
+		}	
+
+		@media only screen and (min-width: 48.1em) {
+			[class*="l"] > * {
+				border-left: 1px solid rgba(0,0,0,.3);
+			}
 		}
 
 </style>
@@ -49,226 +72,226 @@
 <body>
 <section>
 	<h2>
-		All screens 
+		All screens - preserves grid on all screens
 	</h2>
 	<div class="g">
 		<div>
-			full width 
+			1 
 		</div>
 	</div>
 	<div class="g g12">
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			two thirds 
+			2/3 
 		</div>
 	</div>
 	<div class="g g13">
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			three quarters 
+			3/4 
 		</div>
 	</div>
 	<div class="g g21">
 		<div>
-			two thirds 
+			2/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 	</div>
 	<div class="g g25">
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 	</div>
 	<div class="g g31">
 		<div>
-			three quarters 
+			3/4 
 		</div>
 		<div>
-			one quarter
+			1/4
 		</div>
 	</div>
 	<div class="g g33">
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 	</div>
 	<div class="g g50">
 		<div>
-			one half 
+			1/2 
 		</div>
 		<div>
-			one half 
+			1/2 
 		</div>
 	</div>
 </section>
 <section>
 	<h2>
-		Medium screens and up 
+		Medium screens and up - collapses grid for small screens
 	</h2>
 	<div class="g">
 		<div>
-			full width 
+			1 
 		</div>
 	</div>
 	<div class="g m12">
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			two thirds 
+			2/3 
 		</div>
 	</div>
 	<div class="g m13">
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			three quarters 
+			3/4 
 		</div>
 	</div>
 	<div class="g m21">
 		<div>
-			two thirds 
+			2/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 	</div>
 	<div class="g m25">
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 	</div>
 	<div class="g m31">
 		<div>
-			three quarters 
+			3/4 
 		</div>
 		<div>
-			one quarter
+			1/4
 		</div>
 	</div>
 	<div class="g m33">
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 	</div>
 	<div class="g m50">
 		<div>
-			one half 
+			1/2 
 		</div>
 		<div>
-			one half 
+			1/2 
 		</div>
 	</div>
 </section>
 <section>
 	<h2>
-		Large screens 
+		Large screens - collapses grid on medium screens
 	</h2>
 	<div class="g">
 		<div>
-			full width 
+			1 
 		</div>
 	</div>
 	<div class="g l12">
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			two thirds 
+			2/3 
 		</div>
 	</div>
 	<div class="g l13">
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			three quarters 
+			3/4 
 		</div>
 	</div>
 	<div class="g l21">
 		<div>
-			two thirds 
+			2/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 	</div>
 	<div class="g l25">
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 		<div>
-			one quarter 
+			1/4 
 		</div>
 	</div>
 	<div class="g l31">
 		<div>
-			three quarters 
+			3/4 
 		</div>
 		<div>
-			one quarter
+			1/4
 		</div>
 	</div>
 	<div class="g l33">
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 		<div>
-			one third 
+			1/3 
 		</div>
 	</div>
 	<div class="g l50">
 		<div>
-			one half 
+			1/2 
 		</div>
 		<div>
-			one half 
+			1/2 
 		</div>
 	</div>
 </section>
