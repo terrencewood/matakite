@@ -10,7 +10,8 @@
 		body {
 			font: 1em sans-serif;
 			margin: 0;
-			padding: 0.5em;
+			padding: 0.25em;
+			background: #fff;
 
 		}
 		h2 {
@@ -23,50 +24,49 @@
 			margin: 1em auto;
 		}
 
-		section > div {
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-
-
-		}
-
-		section > div > div{
-			background: rgba(0,0,0,.1);
-			text-align: center;
-		}
-
-
-		section > div:before {
-			content: attr(class);
-			position: absolute;
-			font: 12px monospace;
-			padding: 4px;
-			background: rgba(0,0,0,.5);
+		.g:before {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			background: #666;
 			color: #fff;
+			content: attr(class);
+			font: 0.75em monospace;
+			padding: 0.5em;
+			position: absolute;
 		}
 		
 		.g > * {
 			font: 1em monospace;
 			padding-top: 0.25em;
 			padding-bottom: 0.25em;
+			border-width: 2px;
+			border-color: #fff;
+			border-style:none;
+			background: #f0f0f0;
+			text-align: center;
 		}
 		
+		.g {
+			margin: 2px 0;
+		}
+		
+		
 		.g:not([class*="m"]):not([class*="l"]) > * {
-			border-left: 1px solid rgba(0,0,0,.3);
+			border-style: none none none solid;
 		}
 		
 		@media only screen and (min-width: 30.1em) {
 			[class*="m"] > * {
-				border-left: 1px solid rgba(0,0,0,.3);
+				border-style: none none none solid; 
 			}
 		}	
-
+ 
 		@media only screen and (min-width: 48.1em) {
 			[class*="l"] > * {
-				border-left: 1px solid rgba(0,0,0,.3);
+				border-style: none none none solid;
 			}
-		}
-
+		}	
 </style>
 </head>
 <body>
