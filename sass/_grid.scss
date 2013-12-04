@@ -12,7 +12,7 @@ $max_ems: 62em !default;
 $gutter: 1rem !default;
 
 
-@mixin widths($prefix) {
+@mixin grid_units($prefix) {
 	.#{$prefix}12 > :first-child { width: 33.333%; }
 	.#{$prefix}12 > * { width: 66.666%; }
 	.#{$prefix}13 > :first-child { width: 25%; }
@@ -47,8 +47,8 @@ $gutter: 1rem !default;
 	.ie & {
 		display: inline-block;
 		margin: 0 -4px 0 0;
-		padding: 0 $base-font-size/2;
-		padding: 0 $gutter/2;
+		padding: 0 $base-font-size;
+		padding: 0 $gutter;
 	}
 }
 
@@ -60,27 +60,35 @@ $gutter: 1rem !default;
 	box-sizing: border-box;
 }
 
-// Default (applies to all screens)
+// All screens grid units .gN
+// - preserves the grid on all screens
 @include breakpoint() {
-	@include widths('g');
+	@include grid_units('g');
 }
 
-// Medium screens
+// Medium screen grid units .mN
+// - preserves the grid on medium screens and above
+// - collapses the grid on small screens
 @include breakpoint('m') {
+	@include grid_units('m');
 	.g > * { padding: 0 $gutter; }
-	@include widths('m');
 }
 
-// Large screens
+// Large screen grid units .lN
+// - preserves the grid on large screens
+// - collapses the grid on small and medium screens
 @include breakpoint('l') {
-	@include widths('l');
+	@include grid_units('l');
+	// hide content on large screens
 	.lxx { display: none; }
 }
 
+// hide content on small screens
 @include breakpoint('s') {
 	.gxx { display: none; }
 }
 
+// hide content on medium screens
 @include breakpoint('(min-width: #{$m_ems}) and (max-width: #{$l_ems})') {
 	.mxx { display: none; }
 }
